@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import CartesianGraph from "./CartesianGraph";
 
 function App() {
+  const points = [
+    { x: -1, y: 1},
+    { x: 1, y: 1},
+    { x: 2, y: 1},
+    { x: 3, y: 1},
+    { x: 4, y: 1},
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{height: '100vmin'}}>
+      <CartesianGraph points={points}></CartesianGraph>
     </div>
   );
 }
